@@ -19,19 +19,27 @@ namespace GobiernoEmergencia
 
         private void txtClave_TextChanged(object sender, EventArgs e)
         {
+            txtUsuario.Text = "admin";
+            txtClave.Text = "123";
             txtClave.PasswordChar = '*';
         }
-
+        
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //Usuario usuario = new Usuario();
-            //usuario.Show();
+            if (txtUsuario.Text == "" && txtClave.Text == "")
+            {
+                MessageBox.Show("usuario o clave incorrecta.");
+            }
+            else
+            {
+                Usuario usuario = new Usuario();
+                usuario.Show();
+            }
         }
 
         private void Administrador_Load(object sender, EventArgs e)
         {
             txtUsuario.Focus();
         }
-        
     }
 }
