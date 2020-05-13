@@ -47,8 +47,8 @@ namespace GobiernoEmergencia.Vista
                         lblBeneficiado.Visible = true;
                         lblNoEres.Visible = false;
                         lblBeneficiado.Text = iterar.Nombre;
-                    }
 
+                    }
                 }
                 else
                 {
