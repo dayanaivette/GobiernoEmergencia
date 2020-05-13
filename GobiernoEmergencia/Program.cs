@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GobiernoEmergencia.Vista;
 
 namespace GobiernoEmergencia
 {
@@ -16,7 +17,7 @@ namespace GobiernoEmergencia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Administrador());
+            Application.Run(new Consultar());
         }
     }
 }
