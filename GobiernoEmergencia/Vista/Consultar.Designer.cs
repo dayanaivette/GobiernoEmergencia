@@ -49,6 +49,7 @@
             this.brnAdmin.TabIndex = 0;
             this.brnAdmin.Text = "Admin";
             this.brnAdmin.UseVisualStyleBackColor = false;
+            this.brnAdmin.Click += new System.EventHandler(this.brnAdmin_Click);
             // 
             // lblConsultar
             // 
@@ -81,6 +82,7 @@
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click_1);
             // 
             // lblBeneficiado
             // 
@@ -129,6 +131,7 @@
             this.Controls.Add(this.brnAdmin);
             this.Name = "Consultar";
             this.Text = "Consultar";
+            this.Load += new System.EventHandler(this.Consultar_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

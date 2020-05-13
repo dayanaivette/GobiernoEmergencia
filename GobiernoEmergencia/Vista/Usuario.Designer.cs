@@ -32,15 +32,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dtvUsuario = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDUI = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnActualizar
             // 
@@ -83,6 +84,7 @@
             this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dtvUsuario
             // 
@@ -99,6 +101,25 @@
             this.dtvUsuario.ReadOnly = true;
             this.dtvUsuario.Size = new System.Drawing.Size(462, 150);
             this.dtvUsuario.TabIndex = 3;
+            this.dtvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvUsuario_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre Completo";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // DUI
+            // 
+            this.DUI.HeaderText = "N° de DUI";
+            this.DUI.Name = "DUI";
+            this.DUI.ReadOnly = true;
             // 
             // label1
             // 
@@ -157,24 +178,6 @@
             this.txtDUI.Size = new System.Drawing.Size(263, 21);
             this.txtDUI.TabIndex = 9;
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre Completo";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // DUI
-            // 
-            this.DUI.HeaderText = "N° de DUI";
-            this.DUI.Name = "DUI";
-            this.DUI.ReadOnly = true;
-            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +196,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Name = "Usuario";
             this.Text = "Usuario";
+            this.Load += new System.EventHandler(this.Usuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dtvUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

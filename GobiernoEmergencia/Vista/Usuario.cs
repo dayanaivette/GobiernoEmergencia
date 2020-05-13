@@ -17,13 +17,10 @@ namespace GobiernoEmergencia.Vista
         {
             InitializeComponent();
         }
+
         Beneficiados user = new Beneficiados();
 
-        private void Usuario_Load(object sender, EventArgs e)
-        {
-            limpiar();
-            cargar();
-        }
+     
         void limpiar()
         {
             txtID.Clear();
@@ -63,17 +60,13 @@ namespace GobiernoEmergencia.Vista
             limpiar();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Usuario_Load_1(object sender, EventArgs e)
         {
-            String id = dtvUsuario.CurrentRow.Cells[0].Value.ToString();
-            String nombre = dtvUsuario.CurrentRow.Cells[1].Value.ToString();
-            String dui = dtvUsuario.CurrentRow.Cells[2].Value.ToString();
-            txtID.Text = id;
-            txtNombre.Text = nombre;
-            txtDUI.Text = dui;
+            limpiar();
+            cargar();
         }
 
-        private void btnActulizar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
             using (EmergenciaGobEntities db = new EmergenciaGobEntities())
             {
@@ -93,7 +86,7 @@ namespace GobiernoEmergencia.Vista
             limpiar();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             using (EmergenciaGobEntities db = new EmergenciaGobEntities())
             {
@@ -107,6 +100,16 @@ namespace GobiernoEmergencia.Vista
             dtvUsuario.Rows.Clear();
             cargar();
             limpiar();
+        }
+
+        private void dtvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String id = dtvUsuario.CurrentRow.Cells[0].Value.ToString();
+            String nombre = dtvUsuario.CurrentRow.Cells[1].Value.ToString();
+            String dui = dtvUsuario.CurrentRow.Cells[2].Value.ToString();
+            txtID.Text = id;
+            txtNombre.Text = nombre;
+            txtDUI.Text = dui;
         }
     }
 }

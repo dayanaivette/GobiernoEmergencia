@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GobiernoEmergencia.MODEL;
+using GobiernoEmergencia.Vista;
 
 namespace GobiernoEmergencia
 {
@@ -17,13 +19,6 @@ namespace GobiernoEmergencia
             InitializeComponent();
         }
 
-        private void txtClave_TextChanged(object sender, EventArgs e)
-        {
-            txtUsuario.Text = "admin";
-            txtClave.Text = "123";
-            txtClave.PasswordChar = '*';
-        }
-        
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "" && txtClave.Text == "")
@@ -37,7 +32,15 @@ namespace GobiernoEmergencia
             }
         }
 
-        private void Administrador_Load(object sender, EventArgs e)
+        private void txtClave_TextChanged_1(object sender, EventArgs e)
+        {
+
+            txtUsuario.Text = "admin";
+            txtClave.Text = "123";
+            txtClave.PasswordChar = '*';
+        }
+
+        private void Administrador_Load_1(object sender, EventArgs e)
         {
             txtUsuario.Focus();
         }

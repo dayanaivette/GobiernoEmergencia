@@ -72,6 +72,7 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(276, 21);
             this.txtClave.TabIndex = 3;
+            this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged_1);
             // 
             // btnEntrar
             // 
@@ -79,7 +80,7 @@
             this.btnEntrar.FlatAppearance.BorderSize = 0;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(134, 186);
+            this.btnEntrar.Location = new System.Drawing.Point(121, 184);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(82, 31);
             this.btnEntrar.TabIndex = 4;
@@ -100,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Administrador";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Administrador_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
